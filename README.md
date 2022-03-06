@@ -4,7 +4,7 @@
 
 ### O que é TypeScript?
 
-    O TypeScript é um superset para o JavaScript, ou seja você tem todas as funcionalidades do javascript acrescida de varias funcionalidades, qualquer código dessa linguagem pode ser colocado em um arquivo com extensão .ts, e utilizado diretamente. Este é um ponto bastante positivo, pois podemos utilizar códigos JavaScript já existentes, sem a necessidade de realizarmos grandes conversões.
+O TypeScript é um superset para o JavaScript, ou seja você tem todas as funcionalidades do javascript acrescida de varias funcionalidades, qualquer código dessa linguagem pode ser colocado em um arquivo com extensão .ts, e utilizado diretamente. Este é um ponto bastante positivo, pois podemos utilizar códigos JavaScript já existentes, sem a necessidade de realizarmos grandes conversões.
 
 ### Instalando TypeScript
 
