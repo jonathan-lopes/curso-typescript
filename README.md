@@ -35,4 +35,56 @@ npm i -g typescript
         Para executar é só apertar CTRL+ALT+N
     </p>
 </details>
+<br/>
 
+## Seção 2: Tipos
+
+### Strings
+
+```ts
+let nome: string = "João";
+console.log(nome)
+// nome = 28 ERRO
+```
+
+### Numéricos e Booleanos
+
+```ts
+let idade: number = 28;
+idade = 28.5;
+// idade = "Anna" ERRO
+```
+
+```ts
+let possuiHobbies: boolean = false;
+// possuiHobbies = 1; ERRO
+```
+
+### Atribuindo tipos explícitos
+
+```ts
+let minhaIdade;
+minhaIdade = 27;
+console.log(typeof minhaIdade);
+// minhaIdade = "idade é 27";
+// console.log(typeof minhaIdade);
+```
+
+### Array
+
+```ts
+let hobbies: any[] = ["Cozinhar", "Praticar Esportes"];
+console.log(hobbies[0]);
+console.log(typeof hobbies);
+hobbies = [10, 85, 30];
+// hobbies = 5 ERRO
+```
+
+### Tuplas
+
+```ts
+let endereco: [string, number, string] = ["Av Principal", 99, ""];
+console.log(endereco);
+endereco = ["Rua Importante", 1260, "Bloco C"];
+console.log(endereco);
+```
