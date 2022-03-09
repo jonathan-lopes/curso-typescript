@@ -43,7 +43,7 @@ npm i -g typescript
 
 ```ts
 let nome: string = "João";
-console.log(nome)
+console.log(nome);
 // nome = 28 ERRO
 ```
 
@@ -60,14 +60,16 @@ let possuiHobbies: boolean = false;
 // possuiHobbies = 1; ERRO
 ```
 
-### Atribuindo tipos explícitos
+### Atribuindo Tipos Explícitos
+
+Dessa forma temos um tipo dinâmico (any) como temos no Javascript.
 
 ```ts
 let minhaIdade;
 minhaIdade = 27;
-console.log(typeof minhaIdade);
-// minhaIdade = "idade é 27";
-// console.log(typeof minhaIdade);
+console.log(typeof minhaIdade); // number
+minhaIdade = "idade é 27";
+console.log(typeof minhaIdade); // string
 ```
 
 ### Array
@@ -82,9 +84,129 @@ hobbies = [10, 85, 30];
 
 ### Tuplas
 
+expressa uma matriz com um número fixo de elementos cujos tipos são conhecidos, mas não precisam ser os mesmos.
+
 ```ts
 let endereco: [string, number, string] = ["Av Principal", 99, ""];
 console.log(endereco);
 endereco = ["Rua Importante", 1260, "Bloco C"];
 console.log(endereco);
 ```
+
+### Enums
+
+Enum é uma maneira de dar nomes mais amigáveis ​​a conjuntos de valores numéricos.
+
+```ts
+enum Cor {
+  Cinza,
+  Verde
+  Azul,
+  Laranja,
+  Amarelo,
+  Vermelho,
+}
+let minhaCor: Cor = Cor.Verde;
+```
+Enum começam a numerar seus membros começando em 0. Você pode alterar isso definindo manualmente o valor de seus membros.
+```ts
+enum Cor {
+  Cinza, // 0
+  Verde = 100, // 100
+  Azul = 10,
+  Laranja,
+  Amarelo,
+  Vermelho = 100,
+}
+
+console.log(Cor.Verde, Cor.Vermelho);
+```
+
+### Any
+
+```ts
+let carro: any = "BMW";
+console.log(carro);
+carro = { marca: "BMW", ano: 2019 };
+console.log(carro);
+```
+
+### Usando Tipos em Funções (Parâmetros e Retorno)
+
+```ts
+
+```
+### Usando Tipos em Funções (Parâmetros e Retorno)
+
+```ts
+function retornaHello(): string { // Retornar uma string
+  return "Hello";
+}
+```
+
+```ts
+// Tipando parâmetros em funções
+function multiplicar(numA: number, numB: number): number {
+  return numA * numB;
+}
+console.log(multiplicar(5, 5));
+console.log(multiplicar(4.7, 9));
+```
+
+### Funções Como Tipos
+Podemos tipar a assinatura de uma função.
+
+```ts
+let calculo: (x: number, y: number) => number;
+calculo = multiplicar;
+console.log(calculo(5, 6));
+```
+### Objeto
+
+```ts
+let usuario: { nome: string; idade: number } = {
+  nome: "João",
+  idade: 27,
+};
+console.log(usuario);
+```
+
+### Definido Tipos Personalizados (Alias)
+
+```ts
+type Funcionario = {
+  supervisores: string[];
+  baterPonto: (horas: number) => string;
+};
+
+let funcionario: Funcionario = {
+  supervisores: ["Marcos", "Anna"],
+  baterPonto: (horario: number): string =>
+    horario <= 8 ? "Ponto normal" : "Fora do horário",
+};
+```
+
+### Múltiplos Tipos com Union Types
+Permite compor ou combinar tipos existentes.
+
+```ts
+let nota: number | string = 10;
+console.log(`Minha nota é ${nota}!`);
+nota = "10";
+console.log(`Minha nota é ${nota}!`);
+```
+
+### Never 
+neveré o tipo de retorno para uma expressão de função ou uma expressão de função de seta que sempre lança uma exceção ou que nunca retorna.
+
+```ts
+function falha(msg: string): never {
+  throw new Error(msg);
+}
+```
+
+## Seção 3: Compilador TypeScript
+
+### Compilação e "noEmitOnError"
+
+Desativa a emissão de arquivos se algum erro de verificação de tipo for relatado.
