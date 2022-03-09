@@ -210,3 +210,73 @@ function falha(msg: string): never {
 ### Compilação e "noEmitOnError"
 
 Desativa a emissão de arquivos se algum erro de verificação de tipo for relatado.
+
+```json
+  "noEmitOnError": true,  
+```
+
+### Alterando o Target (Versão do JavaScript)
+
+Define a versão da linguagem JavaScript que será usado no arquivo compilado. Podendo ser 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'es2021', 'esnext'
+
+```json
+  "target": "es6",  
+```
+
+### Debugando com Source Maps
+
+Crie arquivos de mapa de origem para arquivos JavaScript emitidos.
+
+```json
+  "sourceMap": true,  
+```
+
+### Evitando "Any" Implícito
+
+Habilita o relatório de erros para expressões e declarações com tipo implícito `any`, por padrão é true.
+
+```json
+  "noImplicitAny": true,  
+```
+
+### "strictNullChecks", "noUnusedParameters" e "noUnusedLocals"
+
+#### strictNullChecks
+Ao verificar o tipo, leve em consideração `null` e `undefined`.
+
+```json
+  "strictNullChecks": true,  
+```
+
+#### noUnusedParameters
+Gerar um erro quando um parâmetro de função não é lido.
+
+```json
+  "noUnusedParameters": true,  
+```
+
+#### noUnusedLocals
+Habilita o relatório de erros quando uma variável local não for lida.
+
+```json
+  "noUnusedLocals": true,  
+```
+
+### Diretório de Saída
+Especifique uma pasta de saída para todos os arquivos emitidos.
+
+```json
+  "outDir": "./build",  
+```
+
+### Arquivo de Saída
+Especifica um arquivo que empacota todas as saídas em um único arquivo JavaScript.
+
+```json
+  "outFile": "./build/app.js",  
+```
+
+### Links Úteis:
+
+[tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) <br/>
+[Opções de CLI do tsc](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
