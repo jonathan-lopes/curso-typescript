@@ -134,11 +134,6 @@ console.log(carro);
 ### Usando Tipos em Funções (Parâmetros e Retorno)
 
 ```ts
-
-```
-### Usando Tipos em Funções (Parâmetros e Retorno)
-
-```ts
 function retornaHello(): string { // Retornar uma string
   return "Hello";
 }
