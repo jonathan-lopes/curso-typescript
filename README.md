@@ -1,4 +1,4 @@
-# Curso Typescript! <img align="center" style="width: 30px; height: 30px;" src="https://appmasters.io/static/typescript-logo-26cc95f255ccb936d154b43614f61602.png" alt="Logo Typescript">
+# Curso Typescript! <img align="center" style="width: 30px; height: 30px;" src="https://www.svgrepo.com/show/303600/typescript-logo.svg" alt="Logo Typescript">
 
 ## Seção 1: Introdução
 
